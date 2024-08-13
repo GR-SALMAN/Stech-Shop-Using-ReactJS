@@ -1,0 +1,43 @@
+{
+  "Products": [
+    {
+      "brand": "AMD",
+      "model": "Radeon RX 7900 XTX",
+      "architecture": "RDNA 3",
+      "memory": "24GB GDDR6",
+      "coreClock": "2.3 GHz",
+      "processingCores": 6144,
+      "tdp": 355,
+      "rayTracingCores": 96,
+      "interface": "PCIe 4.0",
+      "price": 999,
+      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2235/innergigabyteimages/kfimg.png"
+    },
+    {
+      "brand": "NVIDIA",
+      "model": "GeForce RTX 4090",
+      "architecture": "Ada Lovelace",
+      "memory": "24GB GDDR6X",
+      "coreClock": "2.5 GHz",
+      "processingCores": 16384,
+      "tdp": 450,
+      "rayTracingCores": 128,
+      "interface": "PCIe 4.0",
+      "price": 1499,
+      "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png"
+    },
+    {
+      "brand": "Intel",
+      "model": "Arc A770",
+      "architecture": "Xe HPG",
+      "memory": "16GB GDDR6",
+      "coreClock": "2.1 GHz",
+      "processingCores": 3584,
+      "tdp": 225,
+      "rayTracingCores": null,
+      "interface": "PCIe 4.0",
+      "price": 349,
+      "image": "https://stock-checker.com/images/products-x/intel-arc.webp"
+    }
+  ]
+}
