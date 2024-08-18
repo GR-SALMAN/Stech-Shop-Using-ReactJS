@@ -1,6 +1,7 @@
 {
   "Products": [
     {
+      "id": "rx7900xtx",
       "brand": "AMD",
       "model": "Radeon RX 7900 XTX",
       "architecture": "RDNA 3",
@@ -11,9 +12,10 @@
       "rayTracingCores": 96,
       "interface": "PCIe 4.0",
       "price": 999,
-      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2235/innergigabyteimages/kfimg.png"
+      "image": "https://dlcdnwebimgs.asus.com/gain/f4c3e41b-8499-4257-aeda-a511285f2831/"
     },
     {
+      "id": "rtx4090",
       "brand": "NVIDIA",
       "model": "GeForce RTX 4090",
       "architecture": "Ada Lovelace",
@@ -27,6 +29,7 @@
       "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png"
     },
     {
+      "id": "a770",
       "brand": "Intel",
       "model": "Arc A770",
       "architecture": "Xe HPG",
@@ -38,6 +41,62 @@
       "interface": "PCIe 4.0",
       "price": 349,
       "image": "https://stock-checker.com/images/products-x/intel-arc.webp"
+    },
+    {
+      "id": "rx6800xt",
+      "brand": "AMD",
+      "model": "Radeon RX 6800 XT",
+      "architecture": "RDNA 2",
+      "memory": "16GB GDDR6",
+      "coreClock": "2.25 GHz",
+      "processingCores": 4608,
+      "tdp": 300,
+      "rayTracingCores": 72,
+      "interface": "PCIe 4.0",
+      "price": 649,
+      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1664/innergigabyteimages/kf-img.png"
+    },
+    {
+      "id": "rtx3080",
+      "brand": "NVIDIA",
+      "model": "GeForce RTX 3080",
+      "architecture": "Ampere",
+      "memory": "10GB GDDR6X",
+      "coreClock": "1.7 GHz",
+      "processingCores": 8704,
+      "tdp": 320,
+      "rayTracingCores": 68,
+      "interface": "PCIe 4.0",
+      "price": 699,
+      "image": "https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cgravity=auto%2Cq=85%2Cwidth=970/wp-content/uploads/nvidia-geforce-rtx-3080.png"
+    },
+    {
+      "id": "rtx3060ti",
+      "brand": "NVIDIA",
+      "model": "GeForce RTX 3060 Ti",
+      "architecture": "Ampere",
+      "memory": "8GB GDDR6",
+      "coreClock": "1.67 GHz",
+      "processingCores": 4864,
+      "tdp": 200,
+      "rayTracingCores": 38,
+      "interface": "PCIe 4.0",
+      "price": 399,
+      "image": "https://cdn.mos.cms.futurecdn.net/PgnXMxrMXiLQtjECT2cHXW.jpg"
+    },
+    {
+      "id": "rx6700xt",
+      "brand": "AMD",
+      "model": "Radeon RX 6700 XT",
+      "architecture": "RDNA 2",
+      "memory": "12GB GDDR6",
+      "coreClock": "2.42 GHz",
+      "processingCores": 2560,
+      "tdp": 230,
+      "rayTracingCores": 40,
+      "interface": "PCIe 4.0",
+      "price": 479,
+      "image": "https://dlcdnwebimgs.asus.com/gain/643cb170-7b45-4ce6-a59e-af140ce66c2c/"
     }
   ]
 }
