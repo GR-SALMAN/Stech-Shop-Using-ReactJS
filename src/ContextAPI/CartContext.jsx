@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useReducer } from "react";
-import { CartReducer } from "../Pages/Cart Components/Reducer/CartReducer";
+import { CartReducer } from "../Pages/Cart Components/Reducer/CartReducer.jsx";
 
 // Create context
 export const ProviderContext = createContext();
