@@ -5,7 +5,6 @@ import Brands from "../Pages/Brands"; // Note the consistent casing
 import AboutUs from "../Pages/AboutUs"; // Corrected casing in import path
 import Contact from "../Pages/Contact";
 import Cart from "../Pages/Cart Components/Cart";
-
 export const RootRouter = createBrowserRouter([
   {
     path: "/",
