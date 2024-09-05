@@ -7,8 +7,8 @@
 
 To Run the fake API:
 
-```npm run fake-api-start
-
+```
+npm run fake-api-start
 ```
 
 > Remember this is in a very early stage of building
