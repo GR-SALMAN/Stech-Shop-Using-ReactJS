@@ -11,8 +11,9 @@
       "tdp": 355,
       "rayTracingCores": 96,
       "interface": "PCIe 4.0",
-      "price": 999,
-      "image": "https://dlcdnwebimgs.asus.com/gain/f4c3e41b-8499-4257-aeda-a511285f2831/"
+      "price": 999.99,
+      "image": "https://dlcdnwebimgs.asus.com/gain/f4c3e41b-8499-4257-aeda-a511285f2831/",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "rtx4090",
@@ -25,8 +26,9 @@
       "tdp": 450,
       "rayTracingCores": 128,
       "interface": "PCIe 4.0",
-      "price": 1499,
-      "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png"
+      "price": 1499.99,
+      "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "a770",
@@ -39,8 +41,9 @@
       "tdp": 225,
       "rayTracingCores": null,
       "interface": "PCIe 4.0",
-      "price": 349,
-      "image": "https://stock-checker.com/images/products-x/intel-arc.webp"
+      "price": 349.99,
+      "image": "https://stock-checker.com/images/products-x/intel-arc.webp",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "rx6800xt",
@@ -53,8 +56,9 @@
       "tdp": 300,
       "rayTracingCores": 72,
       "interface": "PCIe 4.0",
-      "price": 649,
-      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1664/innergigabyteimages/kf-img.png"
+      "price": 649.99,
+      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1664/innergigabyteimages/kf-img.png",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "rtx3080",
@@ -67,8 +71,9 @@
       "tdp": 320,
       "rayTracingCores": 68,
       "interface": "PCIe 4.0",
-      "price": 699,
-      "image": "https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cgravity=auto%2Cq=85%2Cwidth=970/wp-content/uploads/nvidia-geforce-rtx-3080.png"
+      "price": 699.99,
+      "image": "https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cgravity=auto%2Cq=85%2Cwidth=970/wp-content/uploads/nvidia-geforce-rtx-3080.png",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "rtx3060ti",
@@ -81,8 +86,9 @@
       "tdp": 200,
       "rayTracingCores": 38,
       "interface": "PCIe 4.0",
-      "price": 399,
-      "image": "https://cdn.mos.cms.futurecdn.net/PgnXMxrMXiLQtjECT2cHXW.jpg"
+      "price": 399.99,
+      "image": "https://cdn.mos.cms.futurecdn.net/PgnXMxrMXiLQtjECT2cHXW.jpg",
+      "type": "Computer Graphics Card"
     },
     {
       "id": "rx6700xt",
@@ -95,8 +101,9 @@
       "tdp": 230,
       "rayTracingCores": 40,
       "interface": "PCIe 4.0",
-      "price": 479,
-      "image": "https://dlcdnwebimgs.asus.com/gain/643cb170-7b45-4ce6-a59e-af140ce66c2c/"
+      "price": 479.99,
+      "image": "https://dlcdnwebimgs.asus.com/gain/643cb170-7b45-4ce6-a59e-af140ce66c2c/",
+      "type": "Computer Graphics Card"
     }
   ]
 }

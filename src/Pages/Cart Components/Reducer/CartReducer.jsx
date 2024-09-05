@@ -12,7 +12,7 @@ export const CartReducer = (state = [], action) => {
     }
 
     case "REMOVE_THE_ITEM":
-      return state.filter((el) => el.id !== action.payload.id);
+      return state.filter((el) => el.id !== action.payload);
 
     case "MODIFY_ITEM_QUANTITY":
       return state.map((el) =>

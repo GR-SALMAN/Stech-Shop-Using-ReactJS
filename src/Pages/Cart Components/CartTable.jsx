@@ -1,26 +1,34 @@
+/* eslint-disable react/prop-types */
 import { useState, useContext } from "react";
 import { ProviderContext } from "../../ContextAPI/CartContext.jsx";
 
 const CartTable = ({ el }) => {
+  // console.log(el, "the El from the cart table");
   const { dispatch } = useContext(ProviderContext);
-  const [itemQuantity, setItemQuantity] = useState(el.quantity);
-  const { id, image, model, price, quantity } = el;
+  let [itemQuantity, setItemQuantity] = useState(el.quantity);
+
+  console.log(itemQuantity, "Item Quantity");
+  const { type, id, image, model, price, quantity } = el;
 
   return (
     <tr>
-      <td>{id}</td>
       <td>
-        <img src={image} alt={model} className="w-10 h-10" />
+        {" "}
+        {/*  /Image feld */}
+        <img src={image} alt={model} className="w-12 h-12 object-cover" />
       </td>
+      <td>{type}</td>
       <td>{model}</td>
-      <td>{price}</td>
-      <td>
-        <div className="qty_input">
+      <td>${price}</td>
+      <td className="QuantityInput">
+        {" "}
+        {/*  /quantity feld */}
+        <div className="QuantityInput">
           <button
             onClick={() => {
               if (itemQuantity > 1) {
                 dispatch({
-                  type: "MODIFY_QUANTITY_OF_AN_ITEM",
+                  type: "MODIFY_ITEM_QUANTITY",
                   payload: {
                     id: id,
                     quantity: itemQuantity - 1,
@@ -32,14 +40,14 @@ const CartTable = ({ el }) => {
               }
             }}
           >
-            -
+            <i className="fa-solid fa-circle-minus"></i>
           </button>
           <input
             type="number"
             value={itemQuantity}
             onChange={(event) => {
               dispatch({
-                type: "MODIFY_QUANTITY_OF_AN_ITEM",
+                type: "MODIFY_ITEM_QUANTITY",
                 payload: {
                   id: id,
                   quantity: Number(event.target.value),
@@ -51,7 +59,7 @@ const CartTable = ({ el }) => {
           <button
             onClick={() => {
               dispatch({
-                type: "MODIFY_QUANTITY_OF_AN_ITEM",
+                type: "MODIFY_ITEM_QUANTITY",
                 payload: {
                   id: id,
                   quantity: itemQuantity + 1,
@@ -60,16 +68,21 @@ const CartTable = ({ el }) => {
               setItemQuantity(itemQuantity + 1);
             }}
           >
-            +
+            <i className="fa-solid fa-circle-plus"></i>
           </button>
         </div>
       </td>
-      <td>{quantity * price}</td>
+      <td>${quantity * price}</td>
       <td>
+        {" "}
+        {/*  /delete button */}
         <button
-          onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: id })}
+          onClick={() => {
+            alert(`${model} removed from cart`);
+            dispatch({ type: "REMOVE_THE_ITEM", payload: id });
+          }}
         >
-          Delete
+          <i className="fa-solid fa-trash"></i>
         </button>
       </td>
     </tr>

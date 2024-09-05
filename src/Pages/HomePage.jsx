@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; //State and api
 import CartMapItems from "./Cart Components/CartMapItems.jsx";
 function HomePage() {
   const [GPU, setGPU] = useState([]);
@@ -7,7 +7,6 @@ function HomePage() {
     fetch("http://localhost:3000/Products")
       .then((res) => res.json())
       .then((data) => setGPU(data));
-      
   }, []);
 
   return (

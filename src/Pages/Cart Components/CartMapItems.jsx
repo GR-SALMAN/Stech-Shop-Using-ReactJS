@@ -6,13 +6,13 @@ import { ProviderContext } from "../../ContextAPI/CartContext";
 const CartMapItems = ({ gpu }) => {
   const { dispatch } = useContext(ProviderContext);
 
-  const addToCartHandler = (GPU) => {
+  const addToCartHandler = (gpu) => {
     dispatch({
       type: "ADD_TO_CART",
-      payload: GPU,
+      payload: gpu,
     });
 
-    alert(`${GPU.model} added to cart`);
+    alert(`${gpu.model} added to cart`);
   };
 
   return (

@@ -11,6 +11,16 @@
   box-sizing: border-box;
 }
 
+/* animation section*/
+
+* {
+  transition: all 0.5s ease;
+  animation-duration: 0.5s; /* Slow down animations */
+  /* animation-timing-function: ease; */
+}
+
+/* Nav bar animation ends */
+
 body {
   /* background-color: #282c34; */
   font-family: "Quicksand", sans-serif;
@@ -22,7 +32,7 @@ body {
 nav {
   background-color: white;
   font-weight: bold;
-  font-size: larger;
+  font-size: small;
   position: sticky;
   top: 0;
   width: 100%;
@@ -31,7 +41,7 @@ nav {
 }
 
 nav li {
-  padding: 1rem;
+  padding: 10px;
   border-radius: 1rem;
 
   background: transparent;
@@ -54,19 +64,31 @@ nav li:hover {
   border: 1px solid rgba(108, 3, 228, 0.404);
 }
 
+nav ul li button {
+  border-radius: 8px;
+}
+
+.register {
+  background: rgb(226, 143, 221);
+  background: linear-gradient(
+    90deg,
+    rgba(226, 143, 221, 1) 0%,
+    rgba(202, 68, 247, 1) 66%
+  );
+}
+
 * {
   margin: 0 auto;
   padding: 0 auto;
 }
 #root {
-  overflow: hidden;
-  width: 1440px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  /* height: 2000px; */
 }
 
 .singleProduct {
@@ -97,4 +119,64 @@ button:active {
 
 img {
   border-radius: 5px;
+}
+
+.Cart table th {
+  padding: 1rem;
+  text-align: center;
+}
+
+.Cart table td {
+  /* border: 1px solid black; */
+  text-align: center;
+  align-items: center;
+  /* padding: 5px; */
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.Cart table {
+  border-spacing: 25px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  text-align: center;
+  border-radius: 5px;
+  /* border-collapse: separate; */
+}
+
+.Cart table tr {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.486);
+}
+
+.Cart table tr:hover {
+  /* background-color: rgb(31, 216, 216); */
+  /* font-weight: bold; */
+  transform: scale(1.01);
+}
+
+.QuantityInput input {
+  width: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.QuantityInput input:hover {
+  border: 1px gray solid;
+}
+
+.CartSummery {
+  width: 500px;
+  height: auto;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 1rem;
+}
+
+.OrderSummery {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.OrderSummery h2 {
+  padding: 5px;
 }
