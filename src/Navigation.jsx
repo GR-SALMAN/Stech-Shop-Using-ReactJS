@@ -21,7 +21,7 @@ function Navigation() {
             </Link>
           </li>
           <li>
-            <Link to="brands">Brands</Link> {/* No leading '/' */}
+            <Link to="brands">Products</Link> {/* No leading '/' */}
           </li>
           <li>
             <Link to="about">About Us</Link> {/* No leading '/' */}
