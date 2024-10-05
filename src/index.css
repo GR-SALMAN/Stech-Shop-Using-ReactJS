@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 auto;
   box-sizing: border-box;
 }
 
@@ -22,7 +22,6 @@
 /* Nav bar animation ends */
 
 body {
-  /* background-color: #282c34; */
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: auto;
@@ -30,38 +29,47 @@ body {
 }
 
 nav {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-weight: bold;
   font-size: small;
   position: sticky;
-  top: 0;
+  top: 5px;
+  margin-bottom: 5px;
   width: 100%;
   z-index: 1000; /* Ensure nav stays on top of other content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav li {
   padding: 10px;
   border-radius: 1rem;
-
   background: transparent;
   box-shadow: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-radius: 0;
+  border-radius: 1rem;
   border: none;
-  transition: background 0.5s ease, box-shadow 0.5s ease,
-    backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease,
-    border-radius 0.5s ease, border 0.5s ease;
-}
+  position: relative; /* Needed for positioning the ::after pseudo-element */
 
-nav li:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 10px 20px rgba(108, 3, 228, 0.404);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(108, 3, 228, 0.404);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px; /* Height of the bottom border */
+    background-color: rgba(108, 3, 228, 0.404); /* The border color */
+    transition: width 0.4s ease; /* Animation for the "train" effect */
+  }
+
+  &:hover::after {
+    width: 100%; /* Full width on hover */
+  }
 }
 
 nav ul li button {
@@ -77,10 +85,6 @@ nav ul li button {
   );
 }
 
-* {
-  margin: 0 auto;
-  padding: 0 auto;
-}
 #root {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -97,14 +101,13 @@ nav ul li button {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
-
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
 
-.singleProduct:hover {
-  transform: scale(1.05); /* Slightly enlarges the div */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  cursor: pointer; /* Adds a subtle shadow for the pop-out effect */
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarges the div */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Adds a subtle shadow for the pop-out effect */
+  }
 }
 
 button:active {
@@ -121,37 +124,31 @@ img {
   border-radius: 5px;
 }
 
-.Cart table th {
-  padding: 1rem;
-  text-align: center;
-}
-
-.Cart table td {
-  /* border: 1px solid black; */
-  text-align: center;
-  align-items: center;
-  /* padding: 5px; */
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .Cart table {
   border-spacing: 25px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
   text-align: center;
   border-radius: 5px;
-  /* border-collapse: separate; */
-}
 
-.Cart table tr {
-  border-bottom: 2px solid rgba(128, 128, 128, 0.486);
-}
+  th {
+    padding: 1rem;
+    text-align: center;
+  }
 
-.Cart table tr:hover {
-  /* background-color: rgb(31, 216, 216); */
-  /* font-weight: bold; */
-  transform: scale(1.01);
+  td {
+    text-align: center;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  tr {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.486);
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
 }
 
 .QuantityInput input {
@@ -159,10 +156,9 @@ img {
   margin: 5px;
   border-radius: 5px;
   text-align: center;
-}
-
-.QuantityInput input:hover {
-  border: 1px gray solid;
+  & input:hover {
+    border: 1px gray solid;
+  }
 }
 
 .CartSummery {
@@ -179,4 +175,208 @@ img {
 
 .OrderSummery h2 {
   padding: 5px;
+}
+
+#SlideShop {
+  background: rgba(130, 4, 255, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes popupAnimation {
+  from {
+    transform: translateY(50px); /* Start 50px below */
+    opacity: 0; /* Invisible at the start */
+  }
+  to {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.animatePopup {
+  animation: popupAnimation 0.8s ease forwards; /* 0.8s animation, ease effect */
+}
+
+.slideText {
+  text-shadow: 4px 3px 4px rgba(5, 0, 0, 0.247);
+  font-size: 45px;
+  text-align: center;
+  margin: 2rem;
+  /* font-weight: bold; */
+  /* -webkit-text-stroke-width: 1px; */
+  color: white;
+  text-shadow: 7px 6px 16px rgb(179, 56, 250);
+}
+
+.carousel {
+  width: inherit;
+  height: 750px;
+  overflow: hidden;
+}
+
+/* All about the Best selling Items */
+.BestSelling {
+  margin-top: 4rem;
+  width: 1400px;
+  height: 480px;
+
+  & .BestSlider {
+    width: inherit;
+    height: 80%;
+    border: 1px solid black;
+  }
+
+  & .BestSellingHeader {
+    background: linear-gradient(90deg, #0071c5, #7d00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    padding-left: 3rem; /* Adjust padding for the pseudo-element */
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    height: 70px;
+    align-items: center;
+
+    /* Pseudo-element for gradient left border */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2rem;
+      border-radius: 5px;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        #0071c5,
+        #7d00ff
+      ); /* Intel Arc gradient */
+      border-radius: 2px 0 0 2px; /* Match border radius */
+    }
+  }
+}
+
+.product-slide {
+  width: inherit;
+
+  background: rgba(161, 113, 240, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+
+  color: black;
+  width: 245px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative; /* Added to position the button correctly */
+
+  & img {
+    width: inherit;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #a1a1a159;
+    background-color: white;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: small;
+  }
+
+  .add-to-cart-button {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start below the normal position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for both properties */
+    margin-top: 10px; /* Optional: add some space above the button */
+    border: none; /* Optional: remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+
+  &:hover .add-to-cart-button {
+    opacity: 1; /* Show button on hover */
+    transform: translateY(0); /* Move to original position */
+  }
+
+  &:hover button {
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    background: linear-gradient(90deg, #0071c5, #7d00ff);
+  }
+}
+
+.categoriesSlides {
+  /* border: 1px solid #bdaeff; */
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .CatgoryHeader {
+    background: linear-gradient(90deg, #0071c5, #7d00ff);
+    padding-bottom: 3px;
+    border-bottom: 3px solid #7d00ff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /* position: relative; */
+    padding-left: 3rem; /* Adjust padding for the pseudo-element */
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    height: 70px;
+    width: inherit;
+    text-align: center;
+    align-items: center;
+  }
+}
+.TopCtgr {
+  width: inherit;
+  height: 410px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center; /* Ensure spacing between the sliders */
+
+  .swiper {
+    & h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #7d00ff;
+    }
+    height: 250px;
+    width: 365px;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }

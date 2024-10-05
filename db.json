@@ -1,76 +1,103 @@
 {
   "Products": [
     {
-      "id": "rx7900xtx",
+      "id": "rx6800xt",
       "brand": "AMD",
-      "model": "Radeon RX 7900 XTX",
-      "architecture": "RDNA 3",
-      "memory": "24GB GDDR6",
-      "coreClock": "2.3 GHz",
-      "processingCores": 6144,
-      "tdp": 355,
-      "rayTracingCores": 96,
-      "interface": "PCIe 4.0",
-      "price": 999.99,
-      "image": "https://dlcdnwebimgs.asus.com/gain/f4c3e41b-8499-4257-aeda-a511285f2831/",
-      "type": "Computer Graphics Card"
-    },
-    {
-      "id": "rtx4090",
-      "brand": "NVIDIA",
-      "model": "GeForce RTX 4090",
-      "architecture": "Ada Lovelace",
-      "memory": "24GB GDDR6X",
-      "coreClock": "2.5 GHz",
-      "processingCores": 16384,
-      "tdp": 450,
-      "rayTracingCores": 128,
-      "interface": "PCIe 4.0",
-      "price": 1499.99,
-      "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
+      "model": "Radeon RX 6800 XT",
+      "info": [
+        "architecture: RDNA 2",
+        "memory: 16GB GDDR6",
+        "coreClock: 2.25 GHz",
+        "processingCores: 4608",
+        "tdp: 300",
+        "rayTracingCores: 72",
+        "interface: PCIe 4.0"
+      ],
+      "price": 649.99,
+      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1664/innergigabyteimages/kf-img.png",
       "type": "Computer Graphics Card"
     },
     {
       "id": "a770",
       "brand": "Intel",
       "model": "Arc A770",
-      "architecture": "Xe HPG",
-      "memory": "16GB GDDR6",
-      "coreClock": "2.1 GHz",
-      "processingCores": 3584,
-      "tdp": 225,
-      "rayTracingCores": null,
-      "interface": "PCIe 4.0",
+      "info": [
+        "architecture: Xe HPG",
+        "memory: 16GB GDDR6",
+        "coreClock: 2.1 GHz",
+        "processingCores: 3584",
+        "tdp: 225",
+        "rayTracingCores: null",
+        "interface: PCIe 4.0"
+      ],
       "price": 349.99,
       "image": "https://stock-checker.com/images/products-x/intel-arc.webp",
       "type": "Computer Graphics Card"
     },
     {
-      "id": "rx6800xt",
+      "id": "rog-zephyrus-g16",
+      "brand": "Asus",
+      "model": "ROG Zephyrus G16",
+      "info": [
+        "architecture: Intel Core i9",
+        "memory: 16GB DDR5",
+        "storage: 1TB PCIe SSD",
+        "output: 16-inch WQHD",
+        "gpu: NVIDIA GeForce RTX 4060",
+        "interface: Thunderbolt 4, HDMI 2.0",
+        "rayTracingCores: Yes"
+      ],
+      "price": 1999.99,
+      "image": "https://laptopclinic.co.ke/cdn/shop/files/h732_4_d3988902-2278-49dc-801b-c1add1eb1b01.png?v=1723881339&width=700",
+      "type": "Gaming Laptop"
+    },
+    {
+      "id": "rtx4090",
+      "brand": "NVIDIA",
+      "model": "GeForce RTX 4090",
+      "info": [
+        "architecture: Ada Lovelace",
+        "memory: 24GB GDDR6X",
+        "coreClock: 2.5 GHz",
+        "processingCores: 16384",
+        "tdp: 450",
+        "rayTracingCores: 128",
+        "interface: PCIe 4.0"
+      ],
+      "price": 1499.99,
+      "image": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
+      "type": "Computer Graphics Card"
+    },
+    {
+      "id": "rx6700xt",
       "brand": "AMD",
-      "model": "Radeon RX 6800 XT",
-      "architecture": "RDNA 2",
-      "memory": "16GB GDDR6",
-      "coreClock": "2.25 GHz",
-      "processingCores": 4608,
-      "tdp": 300,
-      "rayTracingCores": 72,
-      "interface": "PCIe 4.0",
-      "price": 649.99,
-      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1664/innergigabyteimages/kf-img.png",
+      "model": "Radeon RX 6700 XT",
+      "info": [
+        "architecture: RDNA 2",
+        "memory: 12GB GDDR6",
+        "coreClock: 2.42 GHz",
+        "processingCores: 2560",
+        "tdp: 230",
+        "rayTracingCores: 40",
+        "interface: PCIe 4.0"
+      ],
+      "price": 479.99,
+      "image": "https://dlcdnwebimgs.asus.com/gain/643cb170-7b45-4ce6-a59e-af140ce66c2c/",
       "type": "Computer Graphics Card"
     },
     {
       "id": "rtx3080",
       "brand": "NVIDIA",
       "model": "GeForce RTX 3080",
-      "architecture": "Ampere",
-      "memory": "10GB GDDR6X",
-      "coreClock": "1.7 GHz",
-      "processingCores": 8704,
-      "tdp": 320,
-      "rayTracingCores": 68,
-      "interface": "PCIe 4.0",
+      "info": [
+        "architecture: Ampere",
+        "memory: 10GB GDDR6X",
+        "coreClock: 1.7 GHz",
+        "processingCores: 8704",
+        "tdp: 320",
+        "rayTracingCores: 68",
+        "interface: PCIe 4.0"
+      ],
       "price": 699.99,
       "image": "https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cgravity=auto%2Cq=85%2Cwidth=970/wp-content/uploads/nvidia-geforce-rtx-3080.png",
       "type": "Computer Graphics Card"
@@ -79,31 +106,220 @@
       "id": "rtx3060ti",
       "brand": "NVIDIA",
       "model": "GeForce RTX 3060 Ti",
-      "architecture": "Ampere",
-      "memory": "8GB GDDR6",
-      "coreClock": "1.67 GHz",
-      "processingCores": 4864,
-      "tdp": 200,
-      "rayTracingCores": 38,
-      "interface": "PCIe 4.0",
+      "info": [
+        "architecture: Ampere",
+        "memory: 8GB GDDR6",
+        "coreClock: 1.67 GHz",
+        "processingCores: 4864",
+        "tdp: 200",
+        "rayTracingCores: 38",
+        "interface: PCIe 4.0"
+      ],
       "price": 399.99,
       "image": "https://cdn.mos.cms.futurecdn.net/PgnXMxrMXiLQtjECT2cHXW.jpg",
       "type": "Computer Graphics Card"
     },
     {
-      "id": "rx6700xt",
+      "id": "rx7900xtx",
       "brand": "AMD",
-      "model": "Radeon RX 6700 XT",
-      "architecture": "RDNA 2",
-      "memory": "12GB GDDR6",
-      "coreClock": "2.42 GHz",
-      "processingCores": 2560,
-      "tdp": 230,
-      "rayTracingCores": 40,
-      "interface": "PCIe 4.0",
-      "price": 479.99,
-      "image": "https://dlcdnwebimgs.asus.com/gain/643cb170-7b45-4ce6-a59e-af140ce66c2c/",
+      "model": "Radeon RX 7900 XTX",
+      "info": [
+        "architecture: RDNA 3",
+        "memory: 24GB GDDR6",
+        "coreClock: 2.3 GHz",
+        "processingCores: 6144",
+        "tdp: 355",
+        "rayTracingCores: 96",
+        "interface: PCIe 4.0"
+      ],
+      "price": 999.99,
+      "image": "https://dlcdnwebimgs.asus.com/gain/f4c3e41b-8499-4257-aeda-a511285f2831/",
       "type": "Computer Graphics Card"
+    },
+    {
+      "id": "ps5",
+      "brand": "Sony",
+      "model": "PlayStation 5",
+      "info": [
+        "architecture: Custom AMD Zen 2",
+        "memory: 16GB GDDR6",
+        "storage: 825GB SSD",
+        "output: 4K UHD",
+        "gpu: 10.28 teraflops, RDNA 2",
+        "interface: HDMI 2.1",
+        "rayTracingCores: Yes"
+      ],
+      "price": 499.99,
+      "image": "https://i.pinimg.com/564x/46/36/bd/4636bd0ddf3d052bdebe327fef8ff520.jpg",
+      "type": "Gaming Console"
+    },
+    {
+      "id": "xbox-series-x",
+      "brand": "Microsoft",
+      "model": "Xbox Series X",
+      "info": [
+        "architecture: Custom AMD Zen 2",
+        "memory: 16GB GDDR6",
+        "storage: 1TB NVMe SSD",
+        "output: 4K UHD",
+        "gpu: 12 teraflops, RDNA 2",
+        "interface: HDMI 2.1",
+        "rayTracingCores: Yes"
+      ],
+      "price": 499.99,
+      "image": "https://i.pinimg.com/564x/7b/f1/c5/7bf1c56e0843ba95f9e9976d08b5a711.jpg",
+      "type": "Gaming Console"
+    },
+    {
+      "id": "sony-wh-1000xm5",
+      "brand": "Sony",
+      "model": "WH-1000XM5 Wireless Headphones",
+      "info": [
+        "noiseCancelling: Yes",
+        "batteryLife: 30 hours",
+        "weight: 250g",
+        "connectivity: Bluetooth 5.0",
+        "microphone: Yes"
+      ],
+      "price": 349.99,
+      "image": "https://www.custommacbd.com/cdn/shop/products/Sony_WH-1000XM5_front_black_Custom_mac_BD.png?v=1654752807",
+      "type": "Wireless Headphones"
+    },
+    {
+      "id": "dell-u2723qe",
+      "brand": "Dell",
+      "model": "UltraSharp U2723QE 27\" 4K UHD LCD Monitor",
+      "info": [
+        "resolution: 3840 x 2160",
+        "refreshRate: 60Hz",
+        "panelType: IPS",
+        "colorGamut: 99% sRGB",
+        "connectivity: USB-C, HDMI, DisplayPort"
+      ],
+      "price": 649.99,
+      "image": "https://planorus.com/cdn/shop/files/Dell_UltraSharp_U2723QE_27_Class_4K_UHD_LCD_Monitor_1-removebg-preview.png?v=1722654378&width=543",
+      "type": "Monitor"
+    },
+    {
+      "id": "predator-nitro-16",
+      "brand": "Acer",
+      "model": "Predator Nitro 16",
+      "info": [
+        "processor: Intel Core i7-13700H",
+        "graphics: NVIDIA GeForce RTX 4050",
+        "memory: Up to 32GB DDR5 RAM",
+        "storage: 1TB PCIe NVMe SSD",
+        "display: 16\" FHD (1920 x 1200), 165Hz",
+        "cooling: Dual-fan cooling technology",
+        "battery: Up to 8 hours",
+        "ports: USB-C, HDMI 2.1, multiple USB-A ports",
+        "operating system: Windows 11"
+      ],
+      "price": 1399.99,
+      "image": "https://cdn.uc.assets.prezly.com/49324705-023f-4dc9-ac70-1a1dc0630aaa/-/format/auto/Nitro_16_(AN16-73)_Special_Angle_1.png",
+      "type": "Gaming Laptop"
+    },
+    {
+      "id": "corsair-k70-rgb-mk2",
+      "brand": "Corsair",
+      "model": "K70 RGB MK.2 Mechanical Gaming Keyboard",
+      "info": [
+        "switches: Cherry MX RGB",
+        "backlighting: RGB",
+        "formFactor: Full size",
+        "connection: USB",
+        "features: Dedicated media controls, programmable keys"
+      ],
+      "price": 169.99,
+      "image": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Keyboards/CH-9000081-NA/Gallery/CGK95_WHITE_NA_01.webp",
+      "type": "Gaming Keyboard"
+    },
+    {
+      "id": "samsung-portable-ssd-t7",
+      "brand": "Samsung",
+      "model": "Portable SSD T7 1TB",
+      "info": [
+        "capacity: 1TB",
+        "readSpeed: Up to 1050MB/s",
+        "writeSpeed: Up to 1000MB/s",
+        "interface: USB 3.2 Gen 2",
+        "dimensions: 85 x 57 x 8 mm"
+      ],
+      "price": 139.99,
+      "image": "https://images.samsung.com/is/image/samsung/in-portable-ssd-t7-mu-pc1t0k-ww-frontblack-199843819?$650_519_PNG$",
+      "type": "External SSD"
+    },
+    {
+      "id": "oculus-quest-2",
+      "brand": "Meta",
+      "model": "Quest 2 VR Headset",
+      "info": [
+        "resolution: 1832 x 1920 per eye",
+        "refreshRate: 90Hz",
+        "storage: 64GB / 256GB",
+        "tracking: Inside-out tracking",
+        "connectivity: Wi-Fi, Bluetooth"
+      ],
+      "price": 299.99,
+      "image": "https://vr-compare.com/img/headsets/oculusquest2.png",
+      "type": "VR Headset"
+    },
+    {
+      "id": "logitech-c922",
+      "brand": "Logitech",
+      "model": "C922 Pro Stream HD Webcam",
+      "info": [
+        "videoQuality: 1080p at 30fps",
+        "microphone: Dual stereo",
+        "fieldOfView: 78 degrees",
+        "connection: USB 2.0",
+        "features: Background replacement"
+      ],
+      "price": 99.99,
+      "image": "https://5.imimg.com/data5/SELLER/Default/2020/8/IB/MY/UG/14352828/logitech-c922-pro-stream-hd-webcam-500x500.png",
+      "type": "Webcam"
+    },
+    {
+      "id": "anker-powercore-65w",
+      "brand": "Anker",
+      "model": "PowerCore 65W GaN Charger",
+      "info": [
+        "powerOutput: 65W",
+        "ports: 1 USB-C, 1 USB-A",
+        "size: Compact design",
+        "features: PowerIQ and VoltageBoost technology"
+      ],
+      "price": 49.99,
+      "image": "https://alflip.com/uploads/all/1674988450_Anker%20733%20Power%20Bank%20(GaNPrime%20PowerCore%2065W)%20A1651%20(1).png",
+      "type": "Charger"
+    },
+    {
+      "id": "amazon-echo-dot-5th-gen",
+      "brand": "Amazon",
+      "model": "Echo Dot (5th Gen)",
+      "info": [
+        "smartSpeaker: Yes",
+        "voiceAssistant: Alexa",
+        "connectivity: Wi-Fi, Bluetooth",
+        "features: Smart home control, music streaming"
+      ],
+      "price": 49.99,
+      "image": "https://store.ostrom.de/cdn/shop/files/AmazonEchoDot5.-Anthrazit_48c97b12-f694-4a92-8f5e-bf69ab74a411.png?v=1703176294&width=416",
+      "type": "Smart Speaker"
+    },
+    {
+      "id": "anker-733-power-bank",
+      "brand": "Anker",
+      "model": "733 Power Bank (GaNPrime PowerCore 65W)",
+      "info": [
+        "capacity: 20,000mAh",
+        "powerOutput: 65W",
+        "ports: 1 USB-C, 2 USB-A",
+        "features: GaN technology for compact size"
+      ],
+      "price": 69.99,
+      "image": "https://www.insight.com/en_US/shop/partner/anker/jcr:content/full-width-sub-nav-section/column_layout/-column-1/insight_image.img.png/1656445019363.png",
+      "type": "Power Bank"
     }
   ]
 }

@@ -8,20 +8,29 @@ function Navigation() {
   return (
     <>
       <nav className="navbar">
-        <ul
-          // style={{ overflow: "hidden" }}
-          className="nav-links flex items-center shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
-        >
-          <li style={{ color: "#8581f3" }}>
-            <Link style={{ fontFamily: "Orbitron" }} to="/">
-              <span style={{ fontSize: 35 }}>Stech</span>
+        <ul className="nav-links flex items-center shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+          <li
+            style={{
+              color: "#b557cf",
+              marginLeft: "auto",
+            }}
+          >
+            <Link
+              style={{
+                fontFamily: "Orbitron",
+              }}
+              to="/"
+            >
+              <span style={{ fontSize: 30, textShadow: "3px 2px 20px white;" }}>
+                Stech
+              </span>
               <span style={{ fontWeight: "lighter", fontSize: 20 }}>
                 ELECTRONICS
               </span>
             </Link>
           </li>
           <li>
-            <Link to="brands">Products</Link> {/* No leading '/' */}
+            <Link to="products">Products</Link> {/* No leading '/' */}
           </li>
           <li>
             <Link to="about">About Us</Link> {/* No leading '/' */}

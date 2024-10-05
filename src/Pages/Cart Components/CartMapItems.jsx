@@ -2,113 +2,50 @@
 import { useContext } from "react";
 import { ProviderContext } from "../../ContextAPI/CartContext";
 
-// eslint-disable-next-line react/prop-types
-const CartMapItems = ({ gpu }) => {
-  const { dispatch } = useContext(ProviderContext);
-
-  const addToCartHandler = (gpu) => {
-    dispatch({
-      type: "ADD_TO_CART",
-      payload: gpu,
-    });
-
-    alert(`${gpu.model} added to cart`);
-  };
+const CartMapItems = ({ item }) => {
+  const { addToCartHandler } = useContext(ProviderContext);
 
   return (
     <>
       <div
-        key={gpu.id}
+        key={item.id}
         className="font-bold singleProduct p-4 border rounded shadow w-80 h-auto flex flex-col justify-between"
       >
         <h2
           className="text-xl font-semibold mb-2"
           style={{
-            color:
-              gpu.brand === "AMD"
-                ? "#970A1B"
-                : gpu.brand === "NVIDIA"
-                ? "#76B900"
-                : gpu.brand === "Intel"
-                ? "#0071C5"
-                : "black",
             textAlign: "center",
-            border:
-              gpu.brand === "AMD"
-                ? "2px solid #970A1B"
-                : gpu.brand === "NVIDIA"
-                ? "2px solid #76B900"
-                : gpu.brand === "Intel"
-                ? "2px solid #0071C5"
-                : "black",
+
             borderRadius: "5px",
           }}
         >
-          {gpu.model}
+          {item.model}
         </h2>
         <div className="productImage h-40 w-full mb-2">
           <img
-            src={gpu.image}
-            alt={gpu.model}
-            className="w-full h-full object-cover"
+            src={item.image}
+            alt={item.model}
+            className="w-full h-full object-contain"
           />
         </div>
 
         <ul className="text-left">
           <li className="text-sm">
-            Brand:{" "}
-            <span
-              style={{
-                color:
-                  gpu.brand === "AMD"
-                    ? "#970A1B"
-                    : gpu.brand === "NVIDIA"
-                    ? "#76B900"
-                    : gpu.brand === "Intel"
-                    ? "#0071C5"
-                    : "black",
-              }}
-            >
-              {gpu.brand}
-            </span>
+            Brand: <span style={{}}>{item.brand}</span>
           </li>
-          <li className="text-sm text-gray-500">
-            Memory: <span className="text-black">{gpu.memory}</span>
-          </li>
-          <li className="text-sm text-gray-500">
-            Core Clock: <span className="text-black">{gpu.coreClock}</span>
-          </li>
-          <li className="text-sm text-gray-500">
-            TDP:{" "}
-            <span className="text-black">
-              {gpu.tdp ? `${gpu.tdp}W` : "N/A"}
-            </span>
-          </li>
-          <li className="text-sm text-gray-500">
-            Interface: <span className="text-black">{gpu.interface}</span>
-          </li>
+          <ul>
+            {item.info.map((el) => {
+              <li key={el}>{el}</li>;
+            })}
+          </ul>
         </ul>
 
         <div className="mt-4 text-2xl ">
-          Price:{" "}
-          <span
-            style={{
-              color:
-                gpu.brand === "AMD"
-                  ? "#970A1B"
-                  : gpu.brand === "NVIDIA"
-                  ? "#76B900"
-                  : gpu.brand === "Intel"
-                  ? "#0071C5"
-                  : "black",
-            }}
-          >
-            ${gpu.price ? gpu.price : "N/A"}
-          </span>
+          Price: <span>${item.price ? item.price : "N/A"}</span>
         </div>
 
         <div className="mt-2">
-          <button type="button" onClick={() => addToCartHandler(gpu)}>
+          <button type="button" onClick={() => addToCartHandler(item)}>
             <a
               href="#_"
               className="px-5 py-2.5 relative rounded group font-medium text-white font-medium inline-block"

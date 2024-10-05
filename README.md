@@ -1,13 +1,26 @@
-# Stech Electroincs - Update 1.0
+# Stech Electroincs - Update 1.1
 
 ### patch Note:
 
-- Fixed bug on the code to make the Cart bar functional
-- Worked on some plenty CSS animations
+- Added the SwiperJS for slide animations and added plenty of slides
+- Added more data to the API
+- Worked on some plenty CSS animations too
+
+Initiate the environment insall:
+
+```npm i
+
+```
 
 To Run the fake API:
 
 ```npm run fake-api-start
+
+```
+
+Run the project:
+
+```npm run dev
 
 ```
 
