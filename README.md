@@ -10,7 +10,6 @@ Initiate the environment install:
 
 ```
 npm i
-
 ```
 
 To Run the fake API:
@@ -23,7 +22,6 @@ Run the project:
 
 ```
 npm run dev
-
 ```
 
 > Remember this is in a very early stage of building
