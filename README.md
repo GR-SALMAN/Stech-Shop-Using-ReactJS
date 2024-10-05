@@ -6,9 +6,10 @@
 - Added more data to the API
 - Worked on some plenty CSS animations too
 
-Initiate the environment insall:
+Initiate the environment install:
 
-```npm i
+```
+npm i
 
 ```
 
@@ -20,7 +21,8 @@ npm run fake-api-start
 
 Run the project:
 
-```npm run dev
+```
+npm run dev
 
 ```
 
