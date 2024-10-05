@@ -1,22 +1,25 @@
-// import { useState, useEffect } from "react"; //State and api
-import { useContext } from "react";
-import CartMapItems from "./Cart Components/CartMapItems.jsx";
-import { ProviderContext } from "../ContextAPI/CartContext.jsx";
+import BestSellingSlide from "./SwiperJS_Components/BestSellingSlide.jsx";
+import IntroCarousel from "./SwiperJS_Components/IntroCarousel.jsx";
+import TopCategoriesSlide from "./SwiperJS_Components/TopCategoriesSlide.jsx";
+TopCategoriesSlide;
+BestSellingSlide;
+BestSellingSlide;
+
 function HomePage() {
-  const { GPU } = useContext(ProviderContext);
+  // Assuming Item is an array of products
+
   return (
     <>
-      <section className="hero">
-        <img src="hero-image.jpg" alt="GPU image" />
-        <h2>Welcome to Your GPU Shop</h2>
-        <p>Discover the latest and greatest graphics cards.</p>
-      </section>
-      <div className="mainPage p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {GPU.map((gpu) => (
-            <CartMapItems key={gpu} gpu={gpu} />
-          ))}
-        </div>
+      <div className="carousel .container">
+        <IntroCarousel />
+      </div>
+      <div className="BestSelling .container">
+        <BestSellingSlide />
+      </div>
+
+      <div className="categoriesSlides">
+        <h1 className="CatgoryHeader">Top Categories</h1>
+        <TopCategoriesSlide />
       </div>
     </>
   );

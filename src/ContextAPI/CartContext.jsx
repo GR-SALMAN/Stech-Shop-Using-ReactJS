@@ -9,15 +9,24 @@ export const ProviderContext = createContext();
 // Context provider component
 const CartContext = ({ children }) => {
   const [cartState, dispatch] = useReducer(CartReducer, []);
-  const [GPU, setGPU] = useState([]);
+  const [Item, setItem] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/Products")
       .then((res) => res.json())
-      .then((data) => setGPU(data));
+      .then((data) => setItem(data));
   }, []);
 
-  const value = { cartState, dispatch, GPU, setGPU };
+  const addToCartHandler = (item) => {
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: item,
+    });
+
+    alert(`${item.model} added to cart`);
+  };
+
+  const value = { addToCartHandler, cartState, dispatch, Item, setItem };
 
   return (
     <ProviderContext.Provider value={value}>

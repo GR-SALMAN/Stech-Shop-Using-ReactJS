@@ -72,7 +72,7 @@ const CartTable = ({ el }) => {
           </button>
         </div>
       </td>
-      <td>${quantity * price}</td>
+      <td>${Math.floor(quantity * price)}</td>
       <td>
         {" "}
         {/*  /delete button */}
