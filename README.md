@@ -27,16 +27,14 @@ Initiate the environment install:
 npm i
 ```
 
-To Run the fake API:
-
+No need to run these commands separately anymore
 ```
 npm run fake-api-start
-```
-
-Run the project:
-
-```
 npm run dev
+```
+Just run this: an both fake api and the project will initiate at the same time
+```
+npm run start-all
 ```
 
 > Remember this is in a very early stage of building
