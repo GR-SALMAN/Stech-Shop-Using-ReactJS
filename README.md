@@ -10,7 +10,7 @@
 
 ### Yet to be added:
 
-- Login/SignUp section yet to come
+- Login/SignUp gateway section yet to come
 - Backend is missing
 - Payment Gateway
 - The filter method is built one basics but true filtration mode
