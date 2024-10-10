@@ -10,14 +10,14 @@ function HomePage() {
 
   return (
     <>
-      <div className="carousel .container">
+      <div className="carousel container">
         <IntroCarousel />
       </div>
-      <div className="BestSelling .container">
+      <div className="BestSelling container">
         <BestSellingSlide />
       </div>
 
-      <div className="categoriesSlides">
+      <div className="categoriesSlides container">
         <h1 className="CatgoryHeader">Top Categories</h1>
         <TopCategoriesSlide />
       </div>

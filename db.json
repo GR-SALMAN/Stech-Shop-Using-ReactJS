@@ -104,8 +104,8 @@
     },
     {
       "id": "rtx3060ti",
-      "brand": "NVIDIA",
-      "model": "GeForce RTX 3060 Ti",
+      "brand": "MSI",
+      "model": "GeForce RTX 3060 Ti VENTUS 3X 8G LHR",
       "info": [
         "architecture: Ampere",
         "memory: 8GB GDDR6",
@@ -116,7 +116,7 @@
         "interface: PCIe 4.0"
       ],
       "price": 399.99,
-      "image": "https://cdn.mos.cms.futurecdn.net/PgnXMxrMXiLQtjECT2cHXW.jpg",
+      "image": "https://asset.msi.com/resize/image/global/product/product_16068738908cd568ef83d0797d67da2eeb5689a3c1.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
       "type": "Computer Graphics Card"
     },
     {
@@ -137,6 +137,51 @@
       "type": "Computer Graphics Card"
     },
     {
+      "id": 101,
+      "brand": "Apple",
+      "model": "MacBook Air M3",
+      "info": ["8GB RAM", "256GB SSD", "M3 Chip"],
+      "price": 999,
+      "image": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/mba_15_m3_2024_hero.png",
+      "type": "Gaming Laptop"
+    },
+    {
+      "id": 106,
+      "brand": "Generic",
+      "model": "Handheld Game Console",
+      "info": ["Portable", "Multiple Games", "Easy to Use"],
+      "price": 49.99,
+      "image": "https://static.vecteezy.com/system/resources/previews/013/007/607/non_2x/set-of-console-game-device-handheld-portable-free-png.png",
+      "type": "Handheld Console"
+    },
+    {
+      "id": 102,
+      "brand": "Asus",
+      "model": "ROG Strix Scar 18",
+      "info": ["16GB RAM", "1TB SSD", "RTX 4080"],
+      "price": 2499,
+      "image": "https://dlcdnwebimgs.asus.com/gain/44699E59-8D2F-4DFD-9610-B35717D3019E/w1000/h732",
+      "type": "Gaming Laptop"
+    },
+    {
+      "id": 103,
+      "brand": "Razer",
+      "model": "Blade 16 2024",
+      "info": ["16GB RAM", "1TB SSD", "RTX 4090"],
+      "price": 2999,
+      "image": "https://www.club386.com/wp-content/uploads/2024/05/razer-blade-16-2024-product-photo.jpg",
+      "type": "Gaming Laptop"
+    },
+    {
+      "id": 104,
+      "brand": "Apple",
+      "model": "iPhone 16 Pro Max",
+      "info": ["256GB", "5G", "A17 Chip"],
+      "price": 1099,
+      "image": "https://www.spark.co.nz/content/dam/spark/images/product-images/devices/phones/apple/iphone-16/iphone-16-pro-max/iPhone_16_Pro_Max_Desert_Titanium_1.png",
+      "type": "Smartphone"
+    },
+    {
       "id": "ps5",
       "brand": "Sony",
       "model": "PlayStation 5",
@@ -150,7 +195,7 @@
         "rayTracingCores: Yes"
       ],
       "price": 499.99,
-      "image": "https://i.pinimg.com/564x/46/36/bd/4636bd0ddf3d052bdebe327fef8ff520.jpg",
+      "image": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
       "type": "Gaming Console"
     },
     {
