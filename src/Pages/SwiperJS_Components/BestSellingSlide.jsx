@@ -10,9 +10,19 @@ import "swiper/css/navigation";
 
 const BestSellingSlide = () => {
   const { Item, addToCartHandler } = useContext(ProviderContext);
+
+  const uniqueItems = Item.filter(
+    (el, index, self) => index === self.findIndex((item) => item.id === el.id)
+  );
+
+  let discount = (price) => {
+    let amount = (10 / 100) * price;
+    return amount + price;
+  };
+
   return (
     <>
-      <h1 className="BestSellingHeader center">Best Selling Products</h1>
+      <h1 className="HeaderQuote center">Flash Sale</h1>
       <Swiper
         loop={true}
         cssMode={true}
@@ -28,8 +38,8 @@ const BestSellingSlide = () => {
         modules={[FreeMode, Mousewheel, Navigation, Keyboard, Autoplay]}
         className="mySwiper"
       >
-        {Item &&
-          Item.map((product) => (
+        {uniqueItems &&
+          uniqueItems.map((product) => (
             <SwiperSlide className="product-slide" key={product.id}>
               <img
                 src={product.image}
@@ -38,10 +48,38 @@ const BestSellingSlide = () => {
               />
               <div>
                 <h1>
-                  <strong>{product.model}</strong>
+                  <strong
+                    style={{
+                      color: "blue",
+                      whiteSpace: "nowrap" /* Prevent text wrapping */,
+                      overflow: "hidden" /* Hide overflow */,
+                      textOverflow:
+                        "ellipsis" /* Show '...' if the text overflows */,
+                      fontSize: "1rem" /* Adjust the font size */,
+                      maxWidth:
+                        "100%" /* Ensure it fits within the container */,
+                      display:
+                        "inline-block" /* Ensure it respects the width */,
+                    }}
+                  >
+                    {product.model}
+                  </strong>
                 </h1>
+
                 <h3>{product.brand}</h3>
                 <p>{product.type}</p>
+                <p>
+                  <span
+                    style={{ textDecoration: "line-through", color: "gray" }}
+                  >
+                    {Math.round(discount(product.price))}$
+                  </span>{" "}
+                  <span style={{ color: "green" }}>
+                    {Math.round(product.price) - 0.01}$
+                  </span>
+                  <span style={{ color: "brown" }}> (-10%)</span>
+                </p>
+
                 <button
                   className="add-to-cart-button"
                   onClick={() => addToCartHandler(product)}

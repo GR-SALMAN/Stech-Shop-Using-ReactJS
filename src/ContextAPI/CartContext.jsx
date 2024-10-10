@@ -13,6 +13,7 @@ const CartContext = ({ children }) => {
 
   useEffect(() => {
     fetch("http://localhost:3000/Products")
+      // fetch("db.json")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);

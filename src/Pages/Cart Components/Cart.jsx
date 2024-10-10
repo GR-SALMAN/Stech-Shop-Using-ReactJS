@@ -73,7 +73,19 @@ const Cart = () => {
 
       {cartState.length > 0 && (
         <div className="CartSummery flex flex-col mt-10 mb-10">
-          <h1 className="m-4">Order Summary</h1>
+          <h1
+            className="m-4"
+            style={{
+              fontSize: 20,
+              fontWeight: "bold",
+              background: "linear-gradient(90deg, #0071c5, #7d00ff)", // Gradient
+              WebkitBackgroundClip: "text", // Clip the background to text
+              WebkitTextFillColor: "transparent", // Make the text transparent
+              textShadow: "3px 2px 20px white", // Add shadow effect
+            }}
+          >
+            Order Summary
+          </h1>
           <div className="OrderSummery">
             <h2>
               <strong>Subtotal</strong>

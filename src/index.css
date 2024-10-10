@@ -26,6 +26,7 @@ body {
   font-optical-sizing: auto;
   font-weight: auto;
   font-style: normal;
+  width: 100%;
 }
 
 nav {
@@ -40,40 +41,39 @@ nav {
   position: sticky;
   top: 5px;
   margin-bottom: 5px;
-  width: 100%;
+  width: inherit;
   z-index: 1000; /* Ensure nav stays on top of other content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-nav li {
-  padding: 10px;
-  border-radius: 1rem;
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-radius: 1rem;
-  border: none;
-  position: relative; /* Needed for positioning the ::after pseudo-element */
+  li {
+    padding: 10px;
+    border-radius: 1rem;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    position: relative; /* Needed for positioning the ::after pseudo-element */
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 4px; /* Height of the bottom border */
-    background-color: rgba(108, 3, 228, 0.404); /* The border color */
-    transition: width 0.4s ease; /* Animation for the "train" effect */
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 4px; /* Height of the bottom border */
+      background-color: rgba(108, 3, 228, 0.404); /* The border color */
+      transition: width 0.4s ease; /* Animation for the "train" effect */
+    }
+
+    &:hover::after {
+      width: 100%; /* Full width on hover */
+    }
+
+    button {
+      border-radius: 8px;
+    }
   }
-
-  &:hover::after {
-    width: 100%; /* Full width on hover */
-  }
-}
-
-nav ul li button {
-  border-radius: 8px;
 }
 
 .register {
@@ -86,13 +86,14 @@ nav ul li button {
 }
 
 #root {
+  height: auto;
+  width: 100%;
+
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  /* height: 2000px; */
 }
 
 .singleProduct {
@@ -126,23 +127,23 @@ img {
 
 .Cart table {
   border-spacing: 25px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.185);
   text-align: center;
   border-radius: 5px;
 
-  th {
+  & th {
     padding: 1rem;
     text-align: center;
   }
 
-  td {
+  & td {
     text-align: center;
     align-items: center;
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
-  tr {
+  & tr {
     border-bottom: 2px solid rgba(128, 128, 128, 0.486);
 
     &:hover {
@@ -164,17 +165,17 @@ img {
 .CartSummery {
   width: 500px;
   height: auto;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
   border-radius: 1rem;
 }
 
 .OrderSummery {
   display: grid;
   grid-template-columns: 4fr 1fr;
-}
 
-.OrderSummery h2 {
-  padding: 5px;
+  & h2 {
+    padding: 5px;
+  }
 }
 
 #SlideShop {
@@ -222,7 +223,9 @@ img {
 .BestSelling {
   margin-top: 4rem;
   width: 1400px;
-  height: 480px;
+  height: 450px;
+  /* height: auto; */
+  overflow: hidden;
 
   & .BestSlider {
     width: inherit;
@@ -230,7 +233,7 @@ img {
     border: 1px solid black;
   }
 
-  & .BestSellingHeader {
+  & .HeaderQuote {
     background: linear-gradient(90deg, #0071c5, #7d00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -264,18 +267,21 @@ img {
   }
 }
 
+/* Best Selling Pruducts Slide section */
 .product-slide {
   width: inherit;
 
-  background: rgba(161, 113, 240, 0.55);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* background: rgba(28, 3, 250, 0.171); */
+
+  background: linear-gradient(180deg, #0732f146, #7b00ff2d);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
 
   color: black;
   width: 245px;
-  height: 250px;
+  height: auto;
   overflow: hidden;
   border-radius: 5px;
   position: relative; /* Added to position the button correctly */
@@ -284,7 +290,7 @@ img {
     width: inherit;
     height: 200px;
     object-fit: contain;
-    border: 1px solid #a1a1a159;
+    border: 1px solid rgba(161, 113, 240, 0.55);
     background-color: white;
   }
 
@@ -293,6 +299,11 @@ img {
     flex-direction: column;
     padding: 1rem;
     font-size: small;
+    font-weight: bold;
+
+    & p {
+      color: rgba(0, 0, 0, 0.575);
+    }
   }
 
   .add-to-cart-button {
@@ -317,9 +328,12 @@ img {
   }
 }
 
+/* Top categories producs section  */
 .categoriesSlides {
   /* border: 1px solid #bdaeff; */
+  overflow: hidden;
   width: inherit;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,47 +350,159 @@ img {
     padding-left: 3rem; /* Adjust padding for the pseudo-element */
     font-size: 40px;
     font-weight: bolder;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     border-radius: 2px;
     height: 70px;
     width: inherit;
     text-align: center;
     align-items: center;
   }
-}
-.TopCtgr {
-  width: inherit;
-  height: 410px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center; /* Ensure spacing between the sliders */
+  & .TopCtgr {
+    width: inherit;
+    height: 260px;
 
-  .swiper {
-    & h1 {
-      text-align: center;
-      font-size: 30px;
-      color: #7d00ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center; /* Ensure spacing between the sliders */
+
+    .swiper {
+      & h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #7d00ff;
+      }
+      height: 200px;
+      width: 300px;
     }
+
+    .swiper-slide {
+      height: 100%;
+      width: 100%;
+      /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+/* About Us section  */
+
+#AboutUS {
+  & .testimonials-section {
+    width: 500px;
     height: 250px;
-    width: 365px;
+    border: #a466e76c 2px solid;
+    border-radius: 1rem;
+
+    & .ReviewSwiper {
+      height: inherit;
+      width: inherit;
+
+      & SwiperSlide,
+      p {
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+          width: 120px;
+          width: 120px;
+          object-fit: contain;
+        }
+      }
+
+      & .stars {
+        color: #a466e7; /* Purple color for the stars */
+        font-size: 20px; /* Adjust size as needed */
+      }
+    }
   }
 
-  .swiper-slide {
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  & .gradient-text {
+    background: linear-gradient(90deg, #0071c5, #7d00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    /* padding-left: 2rem; */
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 1rem;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    border-radius: 2px 0 0 2px;
+  }
+}
+/* Footer section  */
+footer {
+  padding-top: 1rem;
+  box-shadow: 0 -8px 10px 0 rgba(80, 31, 137, 0.11);
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+  /* border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem; */
+  height: 240px;
+  width: inherit;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+
+  & .footerLinks ul li {
+    width: 200px;
+  }
+
+  & div {
+    margin-top: 1rem;
+    & link {
+      display: flex;
+      justify-content: flex-start;
     }
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    & li ul h1 {
+      font-weight: bolder;
+    }
+  }
+
+  .footerLinks {
+    & li {
+      margin-right: 1rem;
+    }
+    & h1 {
+      font-weight: bolder;
+    }
+  }
+
+  & .socialIcons li {
+    font-size: larger;
+
+    & Link:hover {
+      color: #a466e7;
+    }
+  }
+
+  & strong {
+    font-size: larger;
   }
 }
