@@ -204,7 +204,6 @@ img {
 
 .slideText {
   text-shadow: 4px 3px 4px rgba(5, 0, 0, 0.247);
-  font-size: 45px;
   text-align: center;
   margin: 2rem;
   /* font-weight: bold; */
@@ -222,15 +221,11 @@ img {
 /* All about the Best selling Items */
 .BestSelling {
   margin-top: 4rem;
-  width: 1400px;
-  height: 450px;
-  /* height: auto; */
   overflow: hidden;
 
   & .BestSlider {
     width: inherit;
     height: 80%;
-    border: 1px solid black;
   }
 
   & .HeaderQuote {
@@ -240,14 +235,12 @@ img {
     background-clip: text;
     text-fill-color: transparent;
     position: relative;
-    padding-left: 3rem; /* Adjust padding for the pseudo-element */
-    font-size: 40px;
+    /* padding-left: 3rem; */
     font-weight: bolder;
     margin-bottom: 1rem;
     border-radius: 2px;
     height: 70px;
     align-items: center;
-
     /* Pseudo-element for gradient left border */
     &::before {
       content: "";
@@ -269,26 +262,16 @@ img {
 
 /* Best Selling Pruducts Slide section */
 .product-slide {
-  width: inherit;
-
-  /* background: rgba(28, 3, 250, 0.171); */
-
   background: linear-gradient(180deg, #0732f146, #7b00ff2d);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
 
   color: black;
-  width: 245px;
-  height: auto;
   overflow: hidden;
   border-radius: 5px;
-  position: relative; /* Added to position the button correctly */
 
   & img {
-    width: inherit;
-    height: 200px;
     object-fit: contain;
     border: 1px solid rgba(161, 113, 240, 0.55);
     background-color: white;
@@ -332,12 +315,7 @@ img {
 .categoriesSlides {
   /* border: 1px solid #bdaeff; */
   overflow: hidden;
-  width: inherit;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   & .CatgoryHeader {
     background: linear-gradient(90deg, #0071c5, #7d00ff);
     padding-bottom: 3px;
@@ -346,28 +324,14 @@ img {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    /* position: relative; */
-    padding-left: 3rem; /* Adjust padding for the pseudo-element */
-    font-size: 40px;
     font-weight: bolder;
-    /* margin-bottom: 1rem; */
     border-radius: 2px;
-    height: 70px;
     width: inherit;
     text-align: center;
     align-items: center;
   }
 
   & .TopCtgr {
-    width: inherit;
-    height: 260px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center; /* Ensure spacing between the sliders */
-
     .swiper {
       & h1 {
         text-align: center;
@@ -379,16 +343,12 @@ img {
     }
 
     .swiper-slide {
-      height: 100%;
-      width: 100%;
       /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.18);
       img {
-        width: 100%;
-        height: 100%;
         object-fit: contain;
       }
     }
@@ -461,7 +421,7 @@ footer {
   grid-template-columns: 2fr 4fr;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
+  /* gap: 4rem; */
 
   & .footerLinks ul li {
     width: 200px;
@@ -469,15 +429,11 @@ footer {
 
   & div {
     margin-top: 1rem;
-    & link {
-      display: flex;
-      justify-content: flex-start;
-    }
   }
 
   & ul {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     gap: 5px;
 
     & li ul h1 {
