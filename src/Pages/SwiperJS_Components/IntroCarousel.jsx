@@ -79,7 +79,9 @@ export default function IntroCarousel() {
               backdropFilter: "blur(10px)",
             }}
           >
-            <h1 className="slideText animatePopup">{el.text}</h1>
+            <h1 className="slideText lg:text-5xl text-md animatePopup">
+              {el.text}
+            </h1>
 
             <Link to="products">
               {" "}

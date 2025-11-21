@@ -10,15 +10,17 @@ function HomePage() {
 
   return (
     <>
-      <div className="carousel container">
+      <div className="lg:h-[750px] h-[450px] container mx-auto">
         <IntroCarousel />
       </div>
-      <div className="BestSelling container">
+      <div className="BestSelling w-auto mx-auto overflow-auto lg: lg:ml-0">
         <BestSellingSlide />
       </div>
 
-      <div className="categoriesSlides container">
-        <h1 className="CatgoryHeader">Top Categories</h1>
+      <div className="categoriesSlides border mt-10">
+        <h1 className="CatgoryHeader text-2xl h-[40px] lg:h-[70px] lg:text-5xl">
+          Top Categories
+        </h1>
         <TopCategoriesSlide />
       </div>
     </>
